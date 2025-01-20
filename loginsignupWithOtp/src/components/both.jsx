@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import Login from "./login";
 import Signup from "./signup";
+import Otp from "./otp";
 
 
 function Both()
 {
   const [Swi,setSwi] = useState(false)
+  const[SwiOtp,setSwiOtp] =useState(false)
 
   const [Arr,setArr] = useState({
     name:"",
@@ -16,6 +18,7 @@ function Both()
 
 
 
+const [data,setData] = useState([])
 const handleInput = (e)=>{
     
     const {name,value} = e.target;
@@ -28,24 +31,55 @@ const handleInput = (e)=>{
 const handleSubmit = (e) =>{
     e.preventDefault();
    
-    console.log(Arr);
-
+    setData([...data,Arr])
+    // console.log(data);
 }
 
 
 
+ const handleLogin = (e)=>{
+    e.preventDefault();
+    setSwiOtp(true)
+ }
 
-    return(
-        <>
-       { Swi == true ?  <Login arr={Arr} SignupPage={()=>{setSwi(false)}}></Login> 
 
-        :<Signup handleInput={handleInput} handleSubmit={handleSubmit} Loginpage={()=>{setSwi(true)}}></Signup>}
-        </>
-    )
+   return(
+    
+    <>
+    
+    
+    {Swi ? (
+    <>
+     
+     {SwiOtp != false ? <Otp></Otp>
+     :
+      <Login data={data} SignupPage={() => setSwi(false)} handleLogin={handleLogin} />}
+      
+    </>
+  ) : (
+    <>
+   
+      <Signup
+        handleInput={handleInput}
+        handleSubmit={handleSubmit}
+        Loginpage={() => setSwi(true)}
+      />
+    </>
+  )}
+
+
+  
+    </>
+   )
 }
 
 
 export default Both
+
+
+
+
+
 
 
 
