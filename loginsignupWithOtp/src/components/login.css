@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .login-container {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+    text-align: center;
+  }
+  
+  .login-container h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  
+  .login-container p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .login-container input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    box-sizing: border-box;
+  }
+  
+  .login-container input:focus {
+    border-color: #2575fc;
+  }
+  
+  .login-container button {
+    width: 100%;
+    padding: 12px;
+    background: #2575fc;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .login-container button:hover {
+    background: #1d5bcc;
+  }
+  
+  .social-login {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .social-login button {
+    flex: 1;
+    background: #f5f5f5;
+    color: #333;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .social-login button:hover {
+    background: #eaeaea;
+  }
+  
+  .signup-link {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .signup-link a {
+    color: #2575fc;
+    text-decoration: none;
+  }
+  
+  .signup-link a:hover {
+    text-decoration: underline;
+  }
+  
